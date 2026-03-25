@@ -175,8 +175,8 @@ nav.scrolled{height:52px;top:0;background:rgba(10,10,10,.98)}
 .mtab.on{color:#fff;border-bottom-color:var(--p)}
 .mtab:hover:not(.on){color:rgba(255,255,255,.7)}
 .market-table{width:100%;border-collapse:collapse}
-.market-table th{font-size:12px;font-weight:500;color:var(--muted2);padding:10px 20px;text-align:left;letter-spacing:.3px;border-bottom:1px solid var(--bd)}
-.market-table td{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;transition:background .15s}
+.market-table th{font-size:12px;font-weight:500;color:var(--muted2);padding:10px 20px;text-align:center;letter-spacing:.3px;border-bottom:1px solid var(--bd)}
+.market-table td{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;transition:background .15s;text-align:center}
 .market-table tr:last-child td{border-bottom:none}
 .market-table tbody tr{transition:background .15s;animation:rowIn .3s ease both}
 .market-table tbody tr:nth-child(1){animation-delay:.03s}
@@ -187,7 +187,7 @@ nav.scrolled{height:52px;top:0;background:rgba(10,10,10,.98)}
 @keyframes rowIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
 .market-table tr:hover td{background:rgba(168,85,247,.04)}
 .market-table tr:hover .pair-name{color:var(--p1)}
-.pair-cell{display:flex;align-items:center;gap:12px}
+.pair-cell{display:flex;align-items:center;gap:12px;justify-content:center}
 .pair-icon{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;transition:transform .2s}
 .market-table tr:hover .pair-icon{transform:scale(1.1)}
 .pair-name{font-weight:700;color:#fff;font-size:14.5px;transition:color .2s}
@@ -447,8 +447,8 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
 .ft-links{list-style:none;display:flex;flex-direction:column;gap:10px}
 .ft-links a{font-size:13.5px;color:var(--muted2);text-decoration:none;transition:color .2s,padding-left .2s;cursor:none;display:inline-block}
 .ft-links a:hover{color:var(--p1);padding-left:6px}
-.ft-bottom{border-top:1px solid var(--bd);padding-top:28px;display:flex;justify-content:space-between;align-items:flex-start;gap:40px;max-width:1200px;margin:0 auto;flex-wrap:wrap}
-.risk-w{font-size:11px;line-height:1.8;color:#2A2A2A;max-width:700px}
+.ft-bottom{border-top:1px solid var(--bd);padding-top:28px;max-width:1200px;margin:0 auto}
+.risk-w{font-size:11px;line-height:1.8;color:#2A2A2A;width:100%}
 .copy{font-size:12.5px;color:var(--muted2);white-space:nowrap}
 
 /* ── MOBILE NAV DRAWER ANIMATION ─────── */
@@ -670,7 +670,7 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
 }
 
 /* ── INFO BOX ─────────────────────────── */
-.info-box{background:var(--p4);border:1px solid rgba(168,85,247,.2);border-radius:14px;padding:22px 26px;display:flex;gap:16px;align-items:flex-start;max-width:1100px;margin:0 auto}
+.info-box{background:var(--s);border:1px solid var(--bd);border-radius:14px;padding:22px 26px;display:flex;gap:16px;align-items:center;justify-content:center;text-align:center;flex-direction:column;max-width:1100px;margin:0 auto}
 .info-box-icon{font-size:22px;flex-shrink:0}
 .info-box-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px}
 .info-box-text{font-size:13.5px;line-height:1.7;color:var(--muted)}
@@ -913,7 +913,7 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
         </tbody>
       </table>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1100px;margin:0 auto" class="rv d3">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1100px;margin:0 auto;text-align:center" class="rv d3">
       <div class="info-box"><div class="info-box-icon">🏦</div><div><div class="info-box-title">NDD Execution</div><div class="info-box-text">No Dealing Desk. Orders go directly to the LP pool with zero internal interference.</div></div></div>
       <div class="info-box"><div class="info-box-icon">🛡️</div><div><div class="info-box-title">Negative Balance Protection</div><div class="info-box-text">Your losses are always capped at your deposited balance — on every account type.</div></div></div>
       <div class="info-box"><div class="info-box-icon">🤖</div><div><div class="info-box-title">Unrestricted EA Support</div><div class="info-box-text">Run any Expert Advisor — scalpers, grid, HFT bots — without restriction or penalty.</div></div></div>
@@ -1036,7 +1036,7 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
         </tbody>
       </table>
     </div>
-    <div class="info-box rv d3">
+    <div class="info-box rv d3" style="text-align:center;flex-direction:column;align-items:center">
       <div class="info-box-icon">🔒</div>
       <div><div class="info-box-title">Client Fund Protection</div><div class="info-box-text">All client funds are held in fully segregated accounts at tier-1 banking institutions. Your deposits are never used for operational expenses or proprietary trading. Your capital is always ring-fenced.</div></div>
     </div>
@@ -1046,19 +1046,9 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
 <!-- ══════════════ ABOUT ══════════════ -->
 <div class="pg" id="pg-about">
   <section style="max-width:1220px;margin:0 auto">
-    <div class="about-split">
-      <div>
-        <h2 class="sec-h rv" style="text-align:left">Transparent.<br><span style="color:var(--p1)">Built to Last.</span></h2>
-        <p class="rv d1" style="font-size:15px;line-height:1.8;color:var(--muted);margin-bottom:20px">Milele Prime is a professional online brokerage committed to delivering institutional-grade execution for every trader.</p>
-        <p class="rv d2" style="font-size:15px;line-height:1.8;color:var(--muted)">We exist to give every trader access to the same institutional infrastructure previously reserved for banks and hedge funds — without gatekeeping, without the markup.</p>
-      </div>
-      <div class="rv d2" style="display:flex;align-items:center;justify-content:center">
-        <div style="background:var(--p4);border:1px solid rgba(168,85,247,.2);border-radius:20px;padding:48px 40px;text-align:center">
-          <div style="font-size:56px;margin-bottom:16px">🛡️</div>
-          <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:8px">Fully Licensed</div>
-          <div style="font-size:14px;color:var(--muted);line-height:1.6">Regulated · Compliant<br>Client Funds Segregated</div>
-        </div>
-      </div>
+    <div style="max-width:1100px;margin:0 auto;text-align:center">
+      <h2 class="sec-h rv">Transparent.<br><span style="color:var(--p1)">Built to Last.</span></h2>
+      <p class="rv d1" style="font-size:16px;line-height:1.8;color:var(--muted);max-width:680px;margin:16px auto 0">Milele Prime is a professional online brokerage committed to delivering institutional-grade execution for every trader. We exist to give every trader access to the same infrastructure previously reserved for banks and hedge funds — without gatekeeping, without the markup.</p>
     </div>
     <h2 class="sec-h rv" style="margin-bottom:32px">What We Stand For</h2>
     <div class="val-grid">
@@ -1086,7 +1076,6 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
         <!-- Feroz Riaz (highlighted) -->
         <div class="rv d1" style="background:var(--s);border:1px solid rgba(168,85,247,.28);border-radius:20px;padding:36px 28px;text-align:center;transition:border-color .3s,transform .3s;position:relative;overflow:hidden;box-shadow:0 0 50px rgba(168,85,247,.09)" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform=''">
           <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p),var(--p1))"></div>
-          <div style="position:absolute;top:16px;right:16px;font-size:9.5px;font-weight:700;color:var(--p1);background:var(--p4);border:1px solid rgba(168,85,247,.25);padding:2px 10px;border-radius:20px;letter-spacing:.5px">CO-FOUNDER</div>
           <div style="width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--p2),var(--p));border:3px solid rgba(168,85,247,.6);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px;font-weight:900;color:#fff;letter-spacing:-1px;box-shadow:0 0 28px rgba(168,85,247,.35)">FER</div>
           <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.3px">Feroz Riaz</div>
           <div style="font-size:11px;font-weight:700;color:var(--p1);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:18px;background:var(--p4);display:inline-block;padding:3px 14px;border-radius:20px;border:1px solid rgba(168,85,247,.25)">Chief Executive Officer</div>
@@ -1171,18 +1160,6 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
   </section>
 </div>
 
-<!-- ── MT5 REQUIRED DISCLAIMER BANNER (every page) ────────── -->
-<div style="background:#0D0D0D;border-top:1px solid rgba(255,255,255,.06);padding:28px 60px;text-align:center">
-  <p style="font-size:11.5px;line-height:1.8;color:#3A3A3A;max-width:900px;margin:0 auto">
-    An investment in derivatives may mean investors may lose an amount even greater than their original investment.
-    Trading of securities, forex, commodities, options and futures involves the risk of losing part or all of your money.
-    Do not trade with money you cannot afford to lose.
-    Milele Prime Ltd does not provide services for citizens/residents of the
-    <strong style="color:#444">United States, Cuba, Iraq, Myanmar, North Korea, Sudan,</strong> and <strong style="color:#444">India.</strong>
-    Information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
-    
-  </p>
-</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1191,8 +1168,8 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
       <div class="ft-logo-row"><img src="data:image/png;base64,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" alt="Milele Prime" width="36" height="36" style="border-radius:8px"><span style="font-size:17px;font-weight:800;color:#fff">MilelePrime</span></div>
       <p class="ft-about">A professional online brokerage delivering institutional-grade forex and CFD execution for every trader.</p>
       <div class="ft-socials">
-        <a href="https://www.instagram.com/milelecorp" target="_blank" rel="noopener" class="ft-s" title="Instagram">📸</a>
-        <a href="https://www.linkedin.com/company/milelecorp/" target="_blank" rel="noopener" class="ft-s" title="LinkedIn">in</a>
+        <a href="https://www.instagram.com/milelecorp" target="_blank" rel="noopener" class="ft-s" title="Instagram" style="padding:0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.linkedin.com/company/milelecorp/" target="_blank" rel="noopener" class="ft-s" title="LinkedIn" style="padding:0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
     </div>
     <div>
