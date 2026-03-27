@@ -564,10 +564,13 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
   body{cursor:auto}
   #cur,#cur2{display:none}
 
-  .ann{font-size:11px;padding:0 12px;height:auto;min-height:36px;text-align:center;flex-wrap:wrap;gap:4px;padding:6px 12px}
-  .ann .ann-btn{margin-left:4px}
+  .ann{font-size:10px;padding:5px 10px;height:auto;min-height:30px;gap:4px}
+  .ann b{display:none}
+  .ann .ann-btn{font-size:9.5px;padding:2px 8px;margin-left:2px}
 
-  nav{padding:0 16px;height:54px;justify-content:space-between}
+  nav{padding:0 16px;height:54px;justify-content:space-between;top:30px}
+  nav.scrolled{top:0}
+  .pg{padding-top:84px}
   .logo{font-size:17px}
   .nav-r{gap:8px;margin-left:auto}
   .btn-login,.btn-signup{display:none}
@@ -659,7 +662,7 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
 
 /* ── 480px (mobile) ─────────────────── */
 @media(max-width:480px){
-  .ann{font-size:10.5px}
+  .ann{font-size:9.5px;height:auto;min-height:28px}
   .hero-badge{font-size:10.5px;text-align:center}
   .market-table th:nth-child(3),.market-table td:nth-child(3){display:none}
   .why-grid{grid-template-columns:1fr}
@@ -798,9 +801,9 @@ footer{background:#080808;border-top:1px solid var(--bd);padding:64px 60px 36px}
   <!-- STATS -->
   <section style="padding:80px 60px">
     <div class="stats-bar rv">
-      <div class="sb"><div class="sb-bar"></div><div class="sb-num"><span class="counter" data-t="200">0</span><span class="sb-unit">+</span></div><div class="sb-lbl">Instruments</div></div>
+      <div class="sb"><div class="sb-bar"></div><div class="sb-num"><span class="counter" data-t="50">0</span><span class="sb-unit">+</span></div><div class="sb-lbl">Instruments</div></div>
       <div class="sb"><div class="sb-bar"></div><div class="sb-num">1:<span class="counter" data-t="500">0</span></div><div class="sb-lbl">Max Leverage</div></div>
-      <div class="sb"><div class="sb-bar"></div><div class="sb-num">0.0<span class="sb-unit">pip</span></div><div class="sb-lbl">Raw spreads From</div></div>
+      <div class="sb"><div class="sb-bar"></div><div class="sb-num">0.0<span class="sb-unit">pip</span></div><div class="sb-lbl">ECN From</div></div>
       <div class="sb"><div class="sb-bar"></div><div class="sb-num"><span class="counter" data-t="10">0</span><span class="sb-unit">ms</span></div><div class="sb-lbl">Execution</div></div>
     </div>
   </section>
